@@ -25,7 +25,7 @@ public class EmployeeService {
 		addressResponse.setUniqueId(employeeSaved.getId());
 		AddressResponse savedAddressResponse = restTemplate.postForObject("http://localhost:8056/add", addressResponse,
 				AddressResponse.class);
-		addressResponse.setId(savedAddressResponse.getId());
+		
 
 		return employeeSaved;
 	}
